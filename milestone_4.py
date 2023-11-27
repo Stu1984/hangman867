@@ -24,15 +24,15 @@ class Hangman:
                     self.hangman_list[index] = letter
             print(self.hangman_list)
             self.num_letters -= 1
+            # return self.num_letters
         else:
             self.num_lives -= 1
             print('Sorry, bad guess')
-            print(f'You have {self.num_lives} left')
+            print(f'You have {self.num_lives} lives left')
             self.guessed_letters_list.append(guess)
             print(f'Letters guessed so far: {self.guessed_letters_list}')
-            
-            
-
+            # return self.num_lives
+      
     def ask_for_input(self):
         while True:
             guess = str(input('Guess a letter in the word: '))
@@ -41,11 +41,11 @@ class Hangman:
                 print('Invalid letter. Please, enter a single alphabetical character.')
             elif guess in self.guessed_letters_list:
                 print('You already tried that letter')
-                self.guessed_letters_list.append(guess)
-                print(self.guessed_letters_list)
+                print(f'Letters guessed so far {self.guessed_letters_list}')
             else:
                 self.check_guess(guess)
                 self.guessed_letters_list.append(guess)
+                break
 
 
 # game1 = Hangman(['peach', 'apple', 'fruit'])
