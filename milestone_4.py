@@ -48,5 +48,5 @@ class Hangman:
                 self.guessed_letters_list.append(guess)
 
 
-game1 = Hangman(['peach', 'apple', 'fruit'])
-game1.ask_for_input()
+# game1 = Hangman(['peach', 'apple', 'fruit'])
+# game1.ask_for_input()
